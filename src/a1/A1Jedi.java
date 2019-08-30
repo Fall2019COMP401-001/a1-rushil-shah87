@@ -37,6 +37,7 @@ public class A1Jedi {
 		int cart_size;
 		String item_name;
 		int item_quant;
+		String temp_cust = "";
 		
 		// this loop runs per customer
 		for (int a=0; a<num_customers; a++) {
@@ -50,12 +51,14 @@ public class A1Jedi {
 				item_quant = scan.nextInt();
 				item_name = scan.next();
 				
-				
 				// this loop runs to obtain the price of each item 
 				for (int c=0; c<num_items; c++) {
 					if(item_name.equals(item_names[c])) {
-						item_total[c] += item_quant;
-						cust_total[c] += 1;
+						if (!(names[a].equals(temp_cust))) {
+							cust_total[c] += 1;
+						}
+						temp_cust = names[a];
+						item_total[c] += item_quant;						
 						c = num_items+1;
 					}
 				}
