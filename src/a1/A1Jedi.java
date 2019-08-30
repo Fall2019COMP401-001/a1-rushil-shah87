@@ -65,7 +65,7 @@ public class A1Jedi {
 			if(item_total[f] == 0) {
 				System.out.println("No customers bought "+item_names[f]);
 			} else {
-				System.out.println(cust_total[f]+" customers bought "+item_total+" "+item_names[f]);
+				System.out.println(cust_total[f]+" customers bought "+item_total[f]+" "+item_names[f]);
 			}
 		}
 	}
