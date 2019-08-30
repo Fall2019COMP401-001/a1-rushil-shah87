@@ -14,10 +14,12 @@ public class A1Jedi {
 		// initializing arrays for inventory
 		String[] item_names = new String[num_items];
 		int[] item_total = new int[num_items];
+		double skip;
 		
 		// fill out arrays with items and prices
 		for (int i=0; i<num_items; i++) {
 			item_names[i] = scan.next();
+			skip = scan.nextDouble();
 			item_total[i] = 0;
 		}
 		
