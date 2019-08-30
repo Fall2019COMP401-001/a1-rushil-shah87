@@ -83,7 +83,7 @@ public class A1Adept {
 		
 		// calculate average
 		double average_cost = (calculateValueSum(total_costs)/num_customers);
-		System.out.println("Average: "+String.format("%.2f",average_cost));		
+		System.out.println("Average: "+String.format("%.2f",average_cost));
 	}
 	
 	/* calculateValueSum doubles
