@@ -29,12 +29,12 @@ public class A1Adept {
 		
 		
 		// initializing variables for reuse
-		String fname = "";
-		String lname = "";
-		int cart_size = 0;
-		double total_cost = 0.00;
-		String item_name = "";
-		int item_quant = 0;
+		String fname;
+		String lname;
+		int cart_size;
+		double total_cost;
+		String item_name;
+		int item_quant;
 		
 		// this loop runs per customer
 		for (int a=0; a<num_customers; a++) {
@@ -43,7 +43,6 @@ public class A1Adept {
 			names[a] = fname + " " + lname;
 			cart_size = scan.nextInt();
 			total_cost = 0.00;
-			names[a] = fname + " " + lname;
 			
 			// this loop runs per item in the customer's cart
 			for (int b=0; b<cart_size; b++) {
@@ -51,10 +50,10 @@ public class A1Adept {
 				item_name = scan.next();
 				
 				// this loop runs to obtain the price of each item 
-				for (int c=0; c<6; c++) {
+				for (int c=0; c<num_items; c++) {
 					if(item_name.equals(item_names[c])) {
 						total_cost += (item_quant*item_prices[c]);
-						c = 6;
+						c = num_items+1;
 					}
 				}
 			}
