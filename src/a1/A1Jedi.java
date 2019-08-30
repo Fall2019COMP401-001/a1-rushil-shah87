@@ -56,7 +56,9 @@ public class A1Jedi {
 					if(item_name.equals(item_names[c])) {
 						if (!(names[a].equals(temp_cust))) {
 							cust_total[c] += 1;
-						}
+						} else if (cust_total[c] == 0) {
+							cust_total[c] += 1;
+						} else {}
 						temp_cust = names[a];
 						item_total[c] += item_quant;						
 						c = num_items+1;
