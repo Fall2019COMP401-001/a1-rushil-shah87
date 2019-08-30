@@ -14,6 +14,7 @@ public class A1Jedi {
 		// initializing arrays for inventory
 		String[] item_names = new String[num_items];
 		int[] item_total = new int[num_items];
+		int[] cust_total = new int[num_items];
 		double skip;
 		
 		// fill out arrays with items and prices
@@ -21,6 +22,7 @@ public class A1Jedi {
 			item_names[i] = scan.next();
 			skip = scan.nextDouble();
 			item_total[i] = 0;
+			cust_total[i] = 0;
 		}
 		
 		int num_customers = scan.nextInt();
@@ -48,10 +50,12 @@ public class A1Jedi {
 				item_quant = scan.nextInt();
 				item_name = scan.next();
 				
+				
 				// this loop runs to obtain the price of each item 
 				for (int c=0; c<num_items; c++) {
 					if(item_name.equals(item_names[c])) {
 						item_total[c] += item_quant;
+						cust_total[c] += 1;
 						c = num_items+1;
 					}
 				}
@@ -61,7 +65,7 @@ public class A1Jedi {
 			if(item_total[f] == 0) {
 				System.out.println("No customers bought "+item_names[f]);
 			} else {
-				System.out.println(item_total[f]+" customers bought "+item_names[f]);
+				System.out.println(cust_total[f]+" customers bought "+item_total+" "+item_names[f]);
 			}
 		}
 	}
