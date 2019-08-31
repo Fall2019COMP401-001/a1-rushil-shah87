@@ -70,7 +70,6 @@ public class A1Jedi {
 				cust_total[k] += cust_items[k];
 			}
 		}
-		System.out.println(Arrays.toString(item_names));
 		for (int f=0; f<num_items; f++) {
 			if(item_total[f] == 0) {
 				System.out.println("No customers bought "+item_names[f]);
